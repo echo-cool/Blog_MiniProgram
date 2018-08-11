@@ -924,7 +924,7 @@ Page({
     var downloadFileDomain = config.getDownloadFileDomain;
 
     var fristImage = self.data.detail.content_first_image;
-
+    console.log(fristImage)
     //获取文章首图临时地址，若没有就用默认的图片,如果图片不是request域名，使用本地图片
     if (fristImage) {
       var n = 0;
@@ -974,7 +974,7 @@ Page({
           if (response.data.status == '200') {
             console.log(posterQrcodeUrl)
             const downloadTaskQrcodeImage = wx.downloadFile({
-              url: 'https://oss2.wangyuyang.top/1.png',
+              url: posterQrcodeUrl,
               success: res => {
                 if (res.statusCode === 200) {
                   qrcodeImagePath = res.tempFilePath;
@@ -1006,7 +1006,7 @@ Page({
                       }
                     });
                     downloadTaskForPostImage.onProgressUpdate((res) => {
-                      console.log('下载文章图片进度：' + res.progress)
+                      //console.log('下载文章图片进度：' + res.progress)
 
                     })
                   }
@@ -1030,7 +1030,7 @@ Page({
               }
             });
             downloadTaskQrcodeImage.onProgressUpdate((res) => {
-              console.log('下载二维码进度', res.progress)
+              //console.log('下载二维码进度', res.progress)
             })
           }
           else {
@@ -1164,6 +1164,7 @@ Page({
       var url = Api.creatPoster();
       var posterImageUrl = Api.getPosterUrl() + "poster-" + postid + ".jpg";
       var creatPosterRequest = wxRequest.postRequest(url, data);
+      console.log(posterImageUrl)
       creatPosterRequest.then(response => {
         if (response.statusCode == 200) {
           if (response.data.status == '200') {

@@ -70,7 +70,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '“' + config.getWebsiteName+'”网站微信小程序,基于WordPress版小程序构建.技术支持：www.watch-life.net',
+      title: '“' + config.getWebsiteName+'”网站微信小程序,基于WordPress版小程序构建',
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
@@ -101,7 +101,7 @@ Page({
           self.setData({
               page: self.data.page + 1
           });
-          console.log('当前页' + self.data.page);
+         // console.log('当前页' + self.data.page);
           this.fetchPostsData(self.data);
       }
       else {
@@ -120,6 +120,10 @@ Page({
   },
   onShow: function (options){
       wx.setStorageSync('openLinkCount', 0);
+      var self = this;
+
+
+
 
   },  
   fetchTopFivePosts: function () {
@@ -164,7 +168,7 @@ Page({
 
         })
         .catch(function (response){
-            console.log(response); 
+            //console.log(response); 
             self.setData({
                 showerror: "block",
                 floatDisplay: "none"

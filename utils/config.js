@@ -30,9 +30,9 @@ var POSTERIMGURL ="../../images/logo700.png"; //生成海报如果没有首图�
 //设置downloadFile合法域名,不带https ,在中括号([])里增加域名，格式：{id=**,domain:'www.**.com'}，用英文逗号分隔。
 //此处设置的域名和小程序与小程序后台设置的downloadFile合法域名要一致。
 var DOWNLOADFILEDOMAIN = [
-  { id: 1, domain: 'x.wangyuyang.top' },
-  { id: 2, domain: 'x.wangyuyang.top' },
-  { id: 3, domain: 'x.wangyuyang.top' }
+  { id: 1, domain: 'w1109790800.leanapp.cn' },
+  { id: 2, domain: 'w1109790800.leanapp.cn' },
+  { id: 3, domain: 'w1109790800.leanapp.cn' }
 ]
  //首页图标导航
  //参数说明：'name'为名称，'image'为图标路径，'url'为跳转的页面，'redirecttype'为跳转的类型，apppage为本小程序的页面，miniapp为其他微信小程序,webpage为web-view的页面
@@ -41,7 +41,7 @@ var DOWNLOADFILEDOMAIN = [
 var INDEXNAV = [
    // { id: '1', name: '微店', image: '../../images/shop.png', url: 'pages/shelf/shelf', redirecttype: 'miniapp', appid: 'wx55ea6098e41af5c4', extraData:'' },
     { id: '2', name: '文章排行', image: '../../images/ranking.png', url: '../hot/hot', redirecttype: 'apppage', appid: '', extraData:''},   
-    { id: '3', name: '教程', image: '../../images/app.png', url: '../list/list?categoryID=2', redirecttype: 'apppage', appid: '', extraData: '' },
+    { id: '3', name: '个人简介', image: '../../images/app.png', url: '../about/about', redirecttype: 'apppage', appid: '', extraData: '' },
    ]
 
 export default {
